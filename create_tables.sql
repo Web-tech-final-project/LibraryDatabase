@@ -2,11 +2,16 @@
 
 -- users 
 create table users (
-	userId int auto_increment,
-    userName varchar(255),
-    password varchar(255),
-    PRIMARY KEY (userName),
-    INDEX (userId)
+	id int auto_increment,
+	userId int,
+    userName varchar(100) unique,
+    password varchar(100),
+    date timestamp,
+    isDeleted bit,
+    PRIMARY KEY (id),
+    INDEX (userId),
+    INDEX (userName),
+    INDEX (date)    
 );
 
 -- books
