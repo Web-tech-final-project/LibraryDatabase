@@ -2,14 +2,13 @@
 
 -- users table
 INSERT INTO users (userName, password) 
-VALUES	('john_doe', 'password123'),
+VALUES	('Jon', 'p123'),
 		('jane_smith', 'qwerty456'),
 		('mark_johnson', 'letmein789'),
 		('sarah_wilson', 'password123'),
 		('michael_brown', 'abc123');
 
  -- books table
--- books table
 INSERT INTO books (isbn, title, author, genreId, datePublished, ownerUserId, dateCheckedOut, dateOfReturn)
 VALUES	
 ('9780141441374', 'Pride and Prejudice', 'Jane Austen', 1, '1813-01-28', 1, '2022-01-01', '2022-02-15'),
@@ -36,15 +35,6 @@ VALUES
 ('9780060850524', 'The Sun Also Rises', 'Ernest Hemingway', 2, '1926-10-22', NULL, NULL, NULL),
 ('9780446310789', 'Gulliver\'s Travels', 'Jonathan Swift', 3, '1726-10-28', NULL, NULL, NULL),
 ('9780385333849', 'For Whom the Bell Tolls', 'Ernest Hemingway', 4, '1940-10-21', NULL, NULL, NULL);
-
--- updating books table
-UPDATE books AS b
-JOIN (
-    SELECT isbn, CASE WHEN amount > 0 THEN TRUE ELSE FALSE END AS isInStock
-    FROM stock
-    GROUP BY isbn
-) AS s ON b.isbn = s.isbn
-SET b.isInStock = s.isInStock;
         
 -- genres table
 INSERT INTO genres (genre)
@@ -58,8 +48,3 @@ VALUES	('Science Fiction'),
 		('Biography'),
 		('Adventure'),
 		('Comedy');
-        
--- stock table
-INSERT INTO stock (isbn, amount)
-SELECT isbn, FLOOR(RAND() * 8) AS amount
-FROM books;
