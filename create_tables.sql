@@ -19,14 +19,13 @@ create table books (
     title varchar(255),
     author varchar(255),
     genreId int,
+    amount int,
     datePublished date,
-    ownerUserId int,
-    dateCheckedOut date null,
-    dateOfReturn date null,
+    imgId int,
     PRIMARY KEY (isbn),
     INDEX (bookId),
     FOREIGN KEY (genreId) REFERENCES genres(genreId),
-    FOREIGN KEY (ownerUserId) REFERENCES users(id)
+    FOREIGN KEY (imgId) REFERENCES bookImgs(imgId)
 );
 
 -- genres
@@ -34,4 +33,23 @@ create table genres (
 	genreId int auto_increment,
     genre varchar(255) unique,
     INDEX (genreId)
+);
+
+-- images of books
+create table bookImgs (
+	imgId int auto_increment,
+    imgPath varchar(255) unique,
+    INDEX (imgId)
+);
+
+-- rental table 
+create table rentals (
+	rentalId int auto_increment,
+    bookId int,
+    userId int,
+    dateOfCheckout date,
+    dateOfReturn date null,
+    INDEX (rentalId),
+    FOREIGN KEY (bookId) REFERENCES books(bookId),
+    FOREIGN KEY (userId) REFERENCES users(id)
 );
