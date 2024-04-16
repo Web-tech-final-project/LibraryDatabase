@@ -12,6 +12,21 @@ create table users (
     INDEX (date)    
 );
 
+
+-- genres
+create table genres (
+	genreId int auto_increment,
+    genre varchar(255) unique,
+    INDEX (genreId)
+);
+
+-- images of books
+create table bookImgs (
+	imgId int auto_increment,
+    imgPath varchar(255) unique,
+    INDEX (imgId)
+);
+
 -- books
 create table books (
 	bookId int auto_increment,
@@ -28,19 +43,6 @@ create table books (
     FOREIGN KEY (imgId) REFERENCES bookImgs(imgId)
 );
 
--- genres
-create table genres (
-	genreId int auto_increment,
-    genre varchar(255) unique,
-    INDEX (genreId)
-);
-
--- images of books
-create table bookImgs (
-	imgId int auto_increment,
-    imgPath varchar(255) unique,
-    INDEX (imgId)
-);
 
 -- rental table 
 create table rentals (
