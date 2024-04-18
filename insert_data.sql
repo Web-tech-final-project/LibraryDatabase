@@ -21,7 +21,6 @@ VALUES	('Science Fiction'),
 		('Adventure'),
 		('Comedy');
 
-
 -- insert img paths into table
 INSERT INTO bookImgs (imgPath) 
 VALUES	('../images/bookImgs/Pride and Prejudice.jpg'),
@@ -61,9 +60,7 @@ VALUES	('../images/bookImgs/Pride and Prejudice.jpg'),
 		('../images/bookImgs/The Outsiders.jpg'),
 		('../images/bookImgs/The Book Thief.jpg'),
 		('../images/bookImgs/White Teeth.jpg'),
-		('../images/bookImgs/Middlemarch.jpg');
-
- 
+		('../images/bookImgs/Middlemarch.jpg'); 
         
 -- books table
 INSERT INTO books (isbn, title, author, genreId, amount, datePublished, imgId)
@@ -105,8 +102,6 @@ VALUES	('9780141441374', 'Pride and Prejudice', 'Jane Austen', 1, 1, '1813-01-28
 		('9780143039430', 'The Book Thief', 'Markus Zusak', 3, 4, '2005-03-14', 36),
 		('9780679728757', 'White Teeth', 'Zadie Smith', 4, 1, '2000-01-01', 37),
 		('9780061124265', 'Middlemarch', 'George Eliot', 5, 5, '1871-12-01', 38);
-        
-
 
 -- data for rental books info
 INSERT INTO rentals (bookId, userId)

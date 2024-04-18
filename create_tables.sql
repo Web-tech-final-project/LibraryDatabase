@@ -12,7 +12,6 @@ create table users (
     INDEX (date)    
 );
 
-
 -- genres
 create table genres (
 	genreId int auto_increment,
@@ -42,7 +41,6 @@ create table books (
     FOREIGN KEY (genreId) REFERENCES genres(genreId),
     FOREIGN KEY (imgId) REFERENCES bookImgs(imgId)
 );
-
 
 -- rental table 
 create table rentals (
