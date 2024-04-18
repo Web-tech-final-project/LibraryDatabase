@@ -47,7 +47,21 @@ VALUES	('../images/bookImgs/Pride and Prejudice.jpg'),
 		('../images/bookImgs/Brave New World.jpg'),
 		('../images/bookImgs/The Sun Also Rises.jpg'),
 		('../images/bookImgs/Gullivers Travels.jpg'),
-		('../images/bookImgs/For Whom the Bell Tolls.jpg');
+		('../images/bookImgs/For Whom the Bell Tolls.jpg'),
+        ('../images/bookImgs/The Secret History.jpg'),
+		('../images/bookImgs/The Master and Margarita.jpg'),
+		('../images/bookImgs/The Kite Runner.jpg'),
+		('../images/bookImgs/Crime and Punishment.jpg'),
+		('../images/bookImgs/Norwegian Wood.jpg'),
+		('../images/bookImgs/Lolita.jpg'),
+		('../images/bookImgs/The Road.jpg'),
+		('../images/bookImgs/The Brothers Karamazov.jpg'),
+		('../images/bookImgs/The Joy Luck Club.jpg'),
+		('../images/bookImgs/The Count of Monte Cristo.jpg'),
+		('../images/bookImgs/The Outsiders.jpg'),
+		('../images/bookImgs/The Book Thief.jpg'),
+		('../images/bookImgs/White Teeth.jpg'),
+		('../images/bookImgs/Middlemarch.jpg');
 
  
         
@@ -76,14 +90,28 @@ VALUES	('9780141441374', 'Pride and Prejudice', 'Jane Austen', 1, 1, '1813-01-28
 		('9780140283334', 'Brave New World', 'Aldous Huxley', 1, 3, '1932-01-01', 21),
 		('9780060850524', 'The Sun Also Rises', 'Ernest Hemingway', 2, 2, '1926-10-22', 22),
 		('9780446310789', 'Gulliver\'s Travels', 'Jonathan Swift', 3, 4, '1726-10-28', 23),
-		('9780385333849', 'For Whom the Bell Tolls', 'Ernest Hemingway', 4, 1, '1940-10-21', 24);
+		('9780385333849', 'For Whom the Bell Tolls', 'Ernest Hemingway', 4, 1, '1940-10-21', 24),
+        ('9781594480003', 'The Secret History', 'Donna Tartt', 1, 3, '1992-09-05', 25),
+		('9780679732754', 'The Master and Margarita', 'Mikhail Bulgakov', 2, 2, '1967-01-01', 26),
+		('9781400079986', 'The Kite Runner', 'Khaled Hosseini', 3, 4, '2003-05-29', 27),
+		('9780307477721', 'Crime and Punishment', 'Fyodor Dostoevsky', 4, 1, '1866-01-01', 28),
+		('9780385349833', 'Norwegian Wood', 'Haruki Murakami', 5, 5, '1987-08-04', 29),
+		('9780679415602', 'Lolita', 'Vladimir Nabokov', 6, 3, '1955-09-15', 30),
+		('9780143039576', 'The Road', 'Cormac McCarthy', 7, 2, '2006-09-26', 31),
+		('9780679720209', 'The Brothers Karamazov', 'Fyodor Dostoevsky', 8, 4, '1880-01-12', 32),
+		('9780316769532', 'The Joy Luck Club', 'Amy Tan', 10, 5, '1989-03-20', 33),
+		('9780446310788', 'The Count of Monte Cristo', 'Alexandre Dumas', 1, 3, '1844-08-28', 34),
+		('9780451526342', 'The Outsiders', 'S.E. Hinton', 2, 2, '1967-04-24', 35),
+		('9780143039430', 'The Book Thief', 'Markus Zusak', 3, 4, '2005-03-14', 36),
+		('9780679728757', 'White Teeth', 'Zadie Smith', 4, 1, '2000-01-01', 37),
+		('9780061124265', 'Middlemarch', 'George Eliot', 5, 5, '1871-12-01', 38);
         
 
 
 -- data for rental books info
-INSERT INTO rentals (bookId, userId, dateOfCheckout)
-VALUES  (1, 1, '2024-04-12'),
-		(2, 1, '2024-04-12'),
-		(3, 1, '2024-04-12'),
-		(4, 1, '2024-04-12'),
-		(5, 1, '2024-04-12');
+INSERT INTO rentals (bookId, userId)
+VALUES  (1, 1),
+		(2, 1),
+		(3, 1),
+		(4, 1),
+		(5, 1);

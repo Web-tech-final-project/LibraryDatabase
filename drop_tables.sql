@@ -1,6 +1,5 @@
--- drop tables scripts
-drop table users;
-drop table genres;
-drop table bookImgs;
-drop table books;
 drop table rentals;
+drop table books;
+drop table bookImgs;
+drop table genres;
+drop table users;
