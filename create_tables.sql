@@ -49,10 +49,11 @@ create table rentals (
     userId int,
     dateOfCheckout date default now(),
     returnBy date GENERATED ALWAYS AS (DATE_ADD(dateOfCheckout, INTERVAL 2 WEEK)),
-    newReturnBy date GENERATED ALWAYS AS (DATE_ADD(returnBy, INTERVAL 1 WEEK)),
-    isRenewed bit default 0,
+    renewalDate date null,
+    newReturnBy date null,
     dateOfReturn date null,
     overdueFee double null,
+    payDate date null,
     INDEX (rentalId),
     FOREIGN KEY (bookId) REFERENCES books(bookId),
     FOREIGN KEY (userId) REFERENCES users(id)
