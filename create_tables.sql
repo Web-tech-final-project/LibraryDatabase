@@ -58,3 +58,14 @@ create table rentals (
     FOREIGN KEY (bookId) REFERENCES books(bookId),
     FOREIGN KEY (userId) REFERENCES users(id)
 );
+
+-- reserves table
+create table reserves (
+	reserveId int auto_increment,
+    bookId int,
+    userId int,
+    isDeleted bit null,
+    INDEX (reserveId),
+    FOREIGN KEY (bookId) REFERENCES books(bookId),
+    FOREIGN KEY (userId) REFERENCES users(id)
+);

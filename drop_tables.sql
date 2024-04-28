@@ -1,3 +1,4 @@
+drop table reserves;
 drop table rentals;
 drop table books;
 drop table bookImgs;
