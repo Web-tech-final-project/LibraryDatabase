@@ -1,7 +1,7 @@
--- create tables scripts
+-- CREATE TABLE scripts
 
 -- users 
-create table users (
+CREATE TABLE users (
 	id int auto_increment,
     userName varchar(100) unique,
     password varchar(100),
@@ -13,21 +13,21 @@ create table users (
 );
 
 -- genres
-create table genres (
+CREATE TABLE genres (
 	genreId int auto_increment,
     genre varchar(255) unique,
     INDEX (genreId)
 );
 
 -- images of books
-create table bookImgs (
+CREATE TABLE bookImgs (
 	imgId int auto_increment,
     imgPath varchar(255) unique,
     INDEX (imgId)
 );
 
 -- books
-create table books (
+CREATE TABLE books (
 	bookId int auto_increment,
     isbn varchar(255),
     title varchar(255),
@@ -42,8 +42,20 @@ create table books (
     FOREIGN KEY (imgId) REFERENCES bookImgs(imgId)
 );
 
+-- reviews
+CREATE TABLE reviews (
+    review_id INT AUTO_INCREMENT PRIMARY KEY,
+    book_id INT,
+    user_id INT, -- If you want to associate reviews with users
+    title VARCHAR(255),
+    rating INT,
+    review_text TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (book_id) REFERENCES books(bookid)
+);
+
 -- rental table 
-create table rentals (
+CREATE TABLE rentals (
 	rentalId int auto_increment,
     bookId int,
     userId int,
@@ -60,7 +72,7 @@ create table rentals (
 );
 
 -- reserves table
-create table reserves (
+CREATE TABLE reserves (
 	reserveId int auto_increment,
     bookId int,
     userId int,
