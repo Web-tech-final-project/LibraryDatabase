@@ -76,6 +76,7 @@ CREATE TABLE reserves (
 	reserveId int auto_increment,
     bookId int,
     userId int,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     isDeleted bit null,
     INDEX (reserveId),
     FOREIGN KEY (bookId) REFERENCES books(bookId),
