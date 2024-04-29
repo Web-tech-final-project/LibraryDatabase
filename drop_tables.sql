@@ -1,3 +1,4 @@
+drop table libraries;
 drop table reserves;
 drop table rentals;
 drop table reviews;
