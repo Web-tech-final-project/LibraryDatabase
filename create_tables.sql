@@ -82,3 +82,13 @@ CREATE TABLE reserves (
     FOREIGN KEY (bookId) REFERENCES books(bookId),
     FOREIGN KEY (userId) REFERENCES users(id)
 );
+
+-- create library table
+CREATE TABLE `libraries` (
+  `id` int(4) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `address` varchar(150) NOT NULL,
+  `type` varchar(20) NOT NULL,
+  `lat` float(10,6) DEFAULT NULL,
+  `lng` float(10,6) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
